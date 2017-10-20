@@ -1,6 +1,6 @@
 package com.wosai.automation.crawler.parser;
 
-import com.wosai.automation.crawler.Common.Utils;
+import com.wosai.automation.crawler.common.Utils;
 import com.wosai.automation.crawler.beans.Config;
 import com.wosai.automation.crawler.beans.ElementNode;
 import com.wosai.automation.crawler.constants.Actions;
