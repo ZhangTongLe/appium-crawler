@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <rule>
+        <click>
+            <class>UIAImage</class>
+            <class>UIAButton</class>
+            <class>UIASwitch</class>
+            <class>UIATableCell</class>
+            <class>UIAStaticText</class>
+            <class>UIAPickerWheel</class>
+            <class>UIACollectionCell</class>
+            <class>android.widget.Button</class>
+            <class>android.widget.ImageButton</class>
+            <class>android.widget.TextView</class>
+            <class>android.widget.ImageView</class>
+        </click>
+        <input>
+            <class>UIATextField</class>
+            <class>UIASearchBar</class>
+            <class>UIASecureTextField</class>
+            <class>android.widget.EditText</class>
+        </input>
+    </rule>
+</config>

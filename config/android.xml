@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android>
+    <appium>
+        <!-- appium配置 -->
+        <host>127.0.0.1</host>
+        <port>4723</port>
+        <implicitlyWait>30</implicitlyWait>
+        <!-- capability配置 -->
+        <capabilities>
+            <appPackage>com.wosai.cashbar</appPackage>
+            <appActivity>com.wosai.cashbar.core.guide.WelcomeActivity</appActivity>
+            <udid>YSBIAEGQ99EA9HW4</udid>
+            <deviceName>Xiaomi</deviceName>
+            <platformVersion>5.0.2</platformVersion>
+            <platformName>Android</platformName>
+            <noReset>false</noReset>>
+        </capabilities>
+    </appium>
+    <!-- 全局变量设置 -->
+    <global>
+        <timeout>30</timeout>
+        <wait>30</wait>
+        <duration>0</duration>
+        <interval>4</interval>
+        <backMaxRetry>5</backMaxRetry>>
+    </global>
+    <!-- 引导工作流 -->
+    <guideFlow>
+        <step>wait>>id::com.wosai.cashbar:id/frag_guide_page_img|15</step>
+        <step>slide>>3</step>
+        <step>click>>id::com.wosai.cashbar:id/frag_guide_page_button</step>
+        <step>click>>id::com.wosai.cashbar:id/login_phone</step>
+        <step>input>>id::com.wosai.cashbar:id/login_phone|10411113333</step>
+        <step>click>>id::com.wosai.cashbar:id/login_password</step>
+        <step>input>>id::com.wosai.cashbar:id/login_password|123456</step>
+        <step>click>>id::com.wosai.cashbar:id/login_button</step>
+        <step>wait>>id::com.wosai.cashbar:id/luna_toolbar_title|10</step>
+    </guideFlow>
+    <blackPage>
+        <class>com.tencent.smtt.webkit.WebView</class>
+    </blackPage>
+    <blackElement>
+        <item>id::com.wosai.cashbar:id/inc_toolbar_back</item>>
+    </blackElement>
+    <tabBar>
+        <text>com.wosai.cashbar/.core.main.MainActivity>>text::首页|服务中心|我</text>
+    </tabBar>
+    <rootPage>
+        <a>com.wosai.cashbar/.core.main.MainActivity</a>
+    </rootPage>
+    <preProcessPage>
+        <item>
+            com.wosai.cashbar/.core.accountBook.AccountBookActivity>>id::com.wosai.cashbar:id/widget_dialog_permission_close|1
+        </item>
+        <item>
+            com.wosai.cashbar/.core.accountBook.filter.FilterActivity>>id::com.wosai.cashbar:id/mdtp_cancel|-1
+        </item>
+    </preProcessPage>
+</android>
